@@ -1,0 +1,18 @@
+export default {
+    loginPoster: require("../assets/images/loginPoster.png"),
+    google: require("../assets/images/google.png"),
+    otpConfirmationImage: require("../assets/images/otp.png"),
+    avatarIcon: require("../assets/images/avtar.png"),
+    profile: require("../assets/images/icon.png"),
+    SplashScreenImage: require("../assets/images/SplashScreenImage.png"),
+    done: require("../assets/images/done.png"),
+    right: require("../assets/images/right.png"),
+    easyHoroscopes: require("../assets/images/timetable.png"),
+    readHoroscopes: require("../assets/images/esoteric.png"),
+    poojaHoroscopes: require("../assets/images/birth.png"),
+    yogHoroscopes: require("../assets/images/rings.png"),
+    yagnaHoroscopes: require("../assets/images/yagna.png"),
+    equalityHoroscopes: require("../assets/images/equality.png"),
+    kalashHoroscopes: require("../assets/images/kumbh-kalash.png"),
+    empty: require("../assets/images/empty.jpg"),
+}

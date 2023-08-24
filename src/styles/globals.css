@@ -1,0 +1,209 @@
+@import '~swiper/css';
+@import '~swiper/css/scrollbar';
+@import '~react-phone-input-2/lib/style.css';
+@import '~@hassanmojab/react-modern-calendar-datepicker/lib/DatePicker.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #fff;
+  font-family: theme('fontFamily.inter');
+}
+
+input,
+textarea {
+  outline: none !important;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: theme('colors.bg-secondary');
+  border: 0;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-scrollbar {
+  background: theme('colors.secondary-600');
+}
+
+.swiper-scrollbar-drag {
+  background: theme('colors.bg-primary');
+}
+
+.phone-input-container .phone-input {
+  font-size: 16px !important;
+  background: #ffffff !important;
+  border: 1px solid #cacaca !important;
+  border-radius: 5px !important;
+  width: 100% !important;
+  height: 50px !important;
+  outline: none !important;
+  padding: 18.5px 14px 18.5px 58px !important;
+  transition: box-shadow ease 0.25s, border-color ease 0.25s !important;
+}
+
+.phone-input-container .flag-dropdown {
+  background-color: transparent;
+  outline: none !important;
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  padding: 0 !important;
+  border-radius: 3px 0 0 3px !important;
+  border: 0 !important;
+}
+.phone-input-container .flag-dropdown .selected-flag {
+  position: relative !important;
+  width: 52px !important;
+  height: 100% !important;
+  padding: 0 0 0 18px !important;
+  border-radius: 3px 0 0 3px !important;
+}
+.phone-input-container .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
+  background-color: transparent !important;
+}
+.phone-input-container .flag-dropdown.open .selected-flag {
+  background-color: transparent !important;
+}
+.phone-input-container .flag-dropdown.open {
+  background: transparent !important;
+}
+.country-name {
+  color: theme('colors.secondary') !important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.custom-calendar {
+  max-width: 100%;
+  width: 100%;
+}
+.custom-calendar .Calendar__day.-selected,
+.Calendar__day.-selectedStart,
+.Calendar__day.-selectedEnd,
+.custom-calendar
+  .Calendar__monthSelectorItem.-active
+  .Calendar__monthSelectorItemText,
+.Calendar__yearSelectorItem.-active .Calendar__yearSelectorText {
+  background-color: theme('colors.primary');
+  height:40px;
+  width: 40px;
+}
+.avatar {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.btn-tab-list {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.btn-tab-list .btn-tab {
+  background: theme('colors.white');
+  color: theme('colors.secondary');
+  min-width: 100px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.btn-tab-list .btn-tab.active {
+  background: theme('colors.secondary');
+  color: theme('colors.white');
+}
+.btn-status {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+.ant-dropdown {
+  z-index: 99999 !important;
+  /* box-sizing: content-box !important;
+  position: relative;
+  display: none; */
+}
+
+.ant-spin-dot-item {
+  background-color: theme('colors.primary') !important;
+}
+
+.ant-spin-nested-loading .ant-spin {
+  max-height: 100% !important;
+  /* background-color:"grey" */
+}
+
+
+
+@layer utilities {
+  .bg-f7771c {
+    --bg-opacity: 1;
+    background-color: rgba(247, 119, 28, var(--bg-opacity));
+  }
+}
+
+/* Animation keyframes */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Spinner animation */
+.animate-spin {
+  animation: spin 1.5s linear infinite;
+}
+
+/* Bounce animation */
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animationTimingFunction: ease-in;
+  }
+  50% {
+    transform: translateY(0);
+    animationTimingFunction: ease-out;
+  }
+}
